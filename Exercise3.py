@@ -19,10 +19,22 @@ phase = input()
 print("Escriba una palabra")
 word = input()
 
-list_words = phase.split()
-# phase_split = phase.split()
-# index_word = phase_split.index(word)
-if (word in list_words):
-    print(list_words.index(word)ho)
-else:
-    print("esta palabra no esta en la lista")
+    # list_words = phase.split()
+    # # phase_split = phase.split()
+    # # index_word = phase_split.index(word)
+    # if (word in list_words):
+    #     print(list_words.index(word))
+    # else:
+    #     print("esta palabra no esta en la lista")
+
+persona1 = {'dni':'12345678','nombre':'fernando'}
+persona2 = {'dni':'12345679','nombre':'kevin'}
+persona3 = {'dni':'12345677','nombre':'lorenzo'}
+
+def is_included(phase:str,word:str) -> int | str:
+    if word in phase:
+        return phase.split().index(word)
+    return "esta palabra no esta en la lista"
+
+    
+print(is_included(phase,word))

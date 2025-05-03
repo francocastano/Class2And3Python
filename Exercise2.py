@@ -10,7 +10,7 @@ Dada la siguiente lista, aplicar las siguientes transformaciones en orden:
 5. Imprimir la lista resultante.
 """
 
-numbers: list[int] = [2, 3, 5, 7, 11]
+numbers: list[int | list[int]] = [2, 3, 5, 7, 11]
 
 """
 Opcional
@@ -19,11 +19,17 @@ Observe que agregar la lista [1] a `numbers`
 es posible, a pesar del tipo documentado de `numbers`,
 pero no es lo mismo que agregar el número 1.
 """
-numbers.append(4)
-print(numbers)
-numbers.insert(0,0)
-print(numbers)
-numbers.insert(3,1)
-print(numbers)
-print(numbers.pop(numbers.index(3)))
-print(numbers)
+
+def tranformations():
+    numbers.append(4)
+    print(numbers)
+    numbers.insert(0,0)
+    print(numbers)
+    numbers.insert(3,1)
+    print(numbers)
+    print(numbers.pop(numbers.index(3)))
+    print(numbers)
+    numbers.append([1])
+    print(numbers)
+    return numbers
+print(tranformations())
